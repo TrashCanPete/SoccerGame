@@ -18,6 +18,8 @@ public class BallManager : MonoBehaviour
     private void Start()
     {
         InstantiateBall();
+
+       
     }
 
     public void InstantiateBall()
