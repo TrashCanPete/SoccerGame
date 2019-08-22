@@ -14,21 +14,24 @@ public class PaddleInput : MonoBehaviour
     public float speed;
     public float clampValue;
     public string axisName;
-    public string punchAxis;
-    private bool punching;
-    public float punchPower;
+    /*  public string punchAxis;
+      private bool punching;
+      public float punchPower;
 
-    private Rigidbody paddleRB;
-    public float startX;
-    public float clampX;
-
+      private Rigidbody paddleRB;
+      public float startX;
+      public float clampX;
+      */
 
 
     // Start is called before the first frame update
+
+        
     private void Start()
     {
-        startX = transform.position.x;
+      /*  startX = transform.position.x;
         paddleRB = GetComponent<Rigidbody>();
+        */
 
         if(playerSetting == PlayerController.player1)
         {
@@ -38,15 +41,16 @@ public class PaddleInput : MonoBehaviour
         {
             axisName = "player2";
         }
-
+        
     }
-
+    
 
     // Update is called once per frame
     void Update()
+        
     {
         MovePaddle(Input.GetAxis(axisName));
-
+        /*
         if (Input.GetKey(KeyCode.Space))
         {
             punching = true;
@@ -58,7 +62,7 @@ public class PaddleInput : MonoBehaviour
         }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, startX, clampX), transform.position.y, transform.position.z);
-   
+   */
 
     }
 
@@ -73,10 +77,10 @@ public class PaddleInput : MonoBehaviour
         
         
     }
-    public void Punch()
+   /* public void Punch()
     {
         paddleRB.AddForce(-transform.right * punchPower);
     }
-
+    */
 
 }

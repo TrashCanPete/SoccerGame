@@ -7,18 +7,21 @@ public class BallBehaviour : MonoBehaviour
     private Rigidbody rb;
     public float ballThrust;
 
+   
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
-        rb.AddForce(transform.forward * ballThrust, ForceMode.Acceleration);
+        rb = GetComponent < Rigidbody>();
+        Invoke("BallMovement", 2);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void BallMovement()
+    {       
+          rb.AddForce(transform.forward * ballThrust, ForceMode.Acceleration);
     }
-}
+
+
+  }
